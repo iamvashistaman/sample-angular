@@ -11,5 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build
-        run: sudo npm install && npm start
-     
+        run: sudo npm install && ls -la
