@@ -10,4 +10,4 @@ jobs:
     environment: dev
     steps:
       - name: build
-        run: ls -la
+        run: ls -la && npm install && apm run build
