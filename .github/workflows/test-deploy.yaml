@@ -10,5 +10,5 @@ jobs:
     environment: test
     steps:
       - name: build
-        run: ls && la -la
+        run: ls && ls -la
 
