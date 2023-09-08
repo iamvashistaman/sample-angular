@@ -10,7 +10,7 @@ jobs:
     environment: dev
     steps:
       - name: build
-        run: npm install && npm run build v-y
+        run: npm install && npm run build -y
       - name: deploy
         run: cd / && ls
      
