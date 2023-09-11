@@ -10,4 +10,4 @@ jobs:
     environment: dev
     steps:
       - name: build
-        run: ls -la && sudo npm install && sudo ng build
+        run: ls -la && pwd
