@@ -10,5 +10,5 @@ jobs:
     environment: test
     steps:
       - name: build
-        run: ls && ls -la
+        run: ls -la && pwd
 
