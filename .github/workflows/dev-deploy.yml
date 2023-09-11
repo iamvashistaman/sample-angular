@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build
-        run: ls -la && pwd
+        run: ls -la && sudo npm install && sudo npm run build && ls -ls | grep dist
