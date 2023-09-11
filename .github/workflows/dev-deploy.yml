@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build
-        run: ls -la && sudo npm install && sudo npm run build && ls -ls | grep dist
+        run: ls -la && npm install && npm run build && ls -ls | grep dist
       - name: SSH server 
         run: echo "${{ secrets.SSH_KEY }}" > ./key && chmod 600 ./key
       - name: Copy build to server
