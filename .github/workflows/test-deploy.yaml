@@ -14,7 +14,8 @@ jobs:
           ssh -i key ec2-user@10.0.12.243  "
           git clone git@github.com:iamvashistaman/devops.git
           sudo mv devops/ /apps/pm2/
-          sudo su - && cd /apps/pm2 && chown -R pm2:pm2 devops
+          sudo su - 
+          cd /apps/pm2 && chown -R pm2:pm2 devops
           su - pm2
           cd devops/scripts/ && chmod +x test.sh
           ./test.sh 
