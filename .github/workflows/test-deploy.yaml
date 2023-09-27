@@ -1,19 +1,14 @@
-name: Deploy-to-test
+name: script-test
 
 on:
   push:
     branches:
-      - test
+      - feature-cicd
 jobs:
   Build-and-Deploy:
-    runs-on: 35.236.219.144
-    environment: test
+    runs-on: feature-cicd-runner
     steps:
       - uses: actions/checkout@v2
-      - name: build
-        run: ls -la && npm install && npm run build && ls -ls | grep dist
       - name: SSH server 
-        run: echo "${{ secrets.SSH_KEY }}" > ./key && chmod 600 ./key && ssh -i key aman@35.236.219.144 "rm -rf /var/www/html/angular-test/*"
-      - name: Copy build to server
-        run: scp -i ./key -r ./dist aman@35.236.219.144:/var/www/html/angular-test/
+        run: echo "${{ secrets.FEATURE_KEY }}" > ./key && chmod 600 ./key && ssh -i key ec2-user@10.0.12.243 "cd /home/ec2-user && echo "cicd is working" > output.txt"
 
