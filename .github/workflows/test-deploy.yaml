@@ -6,7 +6,7 @@ on:
       - feature-cicd
 jobs:
   Build-and-Deploy:
-    runs-on: feature-cicd-runner
+    runs-on: 10.0.1.202
     steps:
       - uses: actions/checkout@v2
       - name: SSH server 
