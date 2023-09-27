@@ -10,5 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: SSH server 
-        run: echo "${{ secrets.FEATURE_KEY }}" > ./key && chmod 600 ./key && ssh -i key ec2-user@10.0.12.243 "cd /home/ec2-user && echo "cicd is working" > output.txt"
+        run: |
+          echo "${{ secrets.FEATURE_KEY }}" > ./key && chmod 600 ./key 
+          ssh -i key ec2-user@10.0.12.243 "cd /home/ec2-user 
+          echo "cicd is working" > output.txt"
 
