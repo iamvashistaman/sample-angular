@@ -12,6 +12,8 @@ jobs:
       - name: SSH server 
         run: |
           echo "${{ secrets.FEATURE_KEY }}" > ./key && chmod 600 ./key 
-          ssh -i key ec2-user@10.0.12.243 "cd /home/ec2-user 
-          echo "cicd is working" > output.txt"
+          ssh -i key ec2-user@10.0.12.243 "sudo su - pm2
+          git clone git@github.com:iamvashistaman/devops.git
+          cd devops/scripts/ && chmod +x test.sh
+          ./test.sh"
 
