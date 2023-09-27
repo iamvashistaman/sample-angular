@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: SSH server 
         run: |
-          echo "${{ secrets.PM2_KEY }}" > ./key && chmod 600 ./key 
-          ssh -i key pm2@10.0.12.243 "
+          echo "${{ secrets.FEATURE_KEY }}" > ./key && chmod 600 ./key 
+          ssh -i key ec2-user@10.0.12.243 "
           git@github.com:MyBloomGitAdmin/devops.git
           cd devops/bloomcare/ && chmod +x test.sh
           ./test.sh"
