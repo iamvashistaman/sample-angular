@@ -11,7 +11,7 @@ jobs:
       - name: SSH server 
         run: |
           echo "${{ secrets.FEATURE_KEY }}" > ./key && chmod 600 ./key 
-          ssh -i key ec2-user@10.0.12.243 "sudo su - pm2
-          git@github.com:MyBloomGitAdmin/devops.git
+          ssh -i key ec2-user@10.0.12.243 "
+          git clone git@github.com:MyBloomGitAdmin/devops.git
           cd devops/bloomcare/ && chmod +x test.sh
           ./test.sh"
