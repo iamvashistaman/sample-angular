@@ -20,4 +20,4 @@ jobs:
           cd devops/scripts/ && sudo chmod +x test.sh
           ./test.sh 
           cd /apps/script/
-          rm -rf devops "
+          sudo rm -rf devops "
