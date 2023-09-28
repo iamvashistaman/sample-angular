@@ -20,4 +20,4 @@ jobs:
           cd devops/scripts/ && chmod +x test.sh
           ./test.sh 
           cd /apps/script/
-          rm -rf devops"
+          rm -rf devops "
