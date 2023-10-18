@@ -1,9 +1,10 @@
 name: script-test
 
 on:
-  push:
-    branches:
-      - feature-cicd
+  workflow_run:
+    workflows: ["script-test"]
+    types:
+      - requested
 jobs:
   Build-and-Deploy:
     runs-on: 10.0.1.202
