@@ -2,7 +2,7 @@ name: script-test
 
 on:
   workflow_run:
-    workflows: ["script-test"]
+    workflows: ["123"]
     types:
       - requested
 jobs:
