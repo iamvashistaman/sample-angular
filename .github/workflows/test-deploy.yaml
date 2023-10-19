@@ -20,3 +20,4 @@ jobs:
           ./test.sh 
           cd /apps/script/
           sudo rm -rf devops "
+
