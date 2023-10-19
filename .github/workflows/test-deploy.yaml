@@ -2,9 +2,7 @@ name: script-test
 
 on:
   workflow_dispatch: # This event allows manual triggering
-  push:
-    branches:
-      - feature-cicd
+
 jobs:
   Build-and-Deploy:
     runs-on: 10.0.1.202
